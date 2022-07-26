@@ -23,6 +23,7 @@ export default function Home({
       return (
   <div>
       { JSON.stringify(products) }
+     
     </div>
 
   )
