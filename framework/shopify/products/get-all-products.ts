@@ -1,9 +1,14 @@
 import { stringify } from "querystring"
-import getAllProductQuery from '../Utils/queries/get-all-products'
-import fetchApi from "../Utils/fetch-api"
+import {
+  fetchApi,
+  normalizeProduct,
+  getAllProductQuery
+} from "../Utils"
+
 import {ProductConnection} from '../schema'
-import {normalizeProduct} from '../Utils/normalize'
-import {Product} from '../../common/types/product'
+import {Product} from '@common/types/product'
+// import getAllProductQuery from '../Utils/queries/get-all-products'
+// import {normalizeProduct} from '../Utils/normalize'
 
 
 type ReturnType = {
