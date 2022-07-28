@@ -3,7 +3,7 @@ const fs = require("fs");
 const merge = require("deepmerge");
 const prettier = require("prettier");
 
-const ALLOWED_FW = ['shopify', 'bigcommerce', 'shopify_local']
+const ALLOWED_FW = ['shopify', 'bigcommerce', 'shopify_local', 'wordpress']
 
 function withFrameworkConfig(defaultConfig = {}) {
   let framework = defaultConfig?.framework?.name
