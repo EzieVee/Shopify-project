@@ -4,7 +4,7 @@ const merge = require("deepmerge");
 const prettier = require("prettier");
 
 const ALLOWED_FW = ['shopify', 'bigcommerce', 'shopify_local', 'wordpress']
-
+const FALLBACK_FW = ALLOWED_FW[0]
 function withFrameworkConfig(defaultConfig = {}) {
   let framework = defaultConfig?.framework?.name
 
@@ -19,7 +19,7 @@ if(!ALLOWED_FW.includes(framework)) {
 }
 
 if (framework === 'shopify_local') {
-  framework = ALLOWED_FW[0]
+  framework = FALLBACK_FW
 }
 
   // ../shopify/next.config
