@@ -10,7 +10,7 @@ export async function getStaticProps() {
   console.log(config.fetch)
   console.log(config.apiUrl)
 
-  const products = await getAllProducts()
+  const products = await getAllProducts(config)
   return {
     props: {
       products
