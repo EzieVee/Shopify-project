@@ -3,6 +3,7 @@ import type { InferGetStaticPropsType } from "next"
 
 import getAllProducts from "@framework/product/get-all-products"
 import {getConfig} from "@framework/api/config"
+import {Layout} from "@components/common"
 
 
 export async function getStaticProps() {
@@ -25,10 +26,12 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
 
       return (
-  <div>
+  <div className="root">
       { JSON.stringify(products) }
      
     </div>
 
   )
 }
+
+Home.Layout = Layout
