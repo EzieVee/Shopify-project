@@ -23,11 +23,9 @@ type CompProps = {
 const Layout: FC<CompProps> = ({ children }) => {
   return (
     <div className={s.root}>
-    <main
-    style={{color: "var(--primary)"}}
-    className="fit"> 
-    {children}
-    </main>;
+      <main className="fit"> 
+        {children}
+      </main>;
     </div>
 
   )
