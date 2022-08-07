@@ -1,0 +1,10 @@
+.root {
+  @apply grid grid-cols-3 grid-rows-2;
+
+  /* grid-template-columns: 4fr 1fr 10fr; */
+  /* grid-template-columns: repeat(3, 1fr); */
+ /* grid-template-columns: 25% 25% 25% */
+ grid-template-columns: repeat(3, minmax(33%, 1fr))
+}
+
+
