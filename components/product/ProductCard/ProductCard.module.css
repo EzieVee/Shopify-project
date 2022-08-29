@@ -1,22 +1,35 @@
 .root {
   @apply relative;
+  max-height: 100% !important;
+
+  &:hover {
+    & .productBg:before {
+      transform: scale(0.99)
+    }
+
+    & .productImage {
+      transform: scale(1.15)
+    }
+  }
 
   &:nth-child(6n + 1) .productBg {
     @apply bg-violet;
   }
 
   &:nth-child(6n + 3) .productBg {
-    @apply bg-pink
+    @apply bg-pink;
   }
 
   &:nth-child(6n + 5) .productBg {
-    @apply bg-blue
+    @apply bg-blue;
   }
 
   &:nth-child(6n + 6) .productBg {
-    @apply bg-cyan
+    @apply bg-cyan;
   }
 }
+
+
 
 .productTag {
   @apply absolute top-0 left-0 z-20;
@@ -32,15 +45,19 @@
   line-height: 2.2em;
 
   & span {
-    @apply py-4 px-6;
+    @apply py-4 px-6 bg-primary;
     box-decoration-break: clone;
   }
 }
 
 .productPrice {
-  @apply pb-4 pt-2 px-6 font-semibold text-sm;
+  @apply bg-primary pb-4 pt-2 px-6 font-semibold text-sm;
   letter-spacing: 0.4
 
+}
+
+.productImage {
+  @apply transition-transform duration-500 block;
 }
 
 .productBg {
@@ -48,7 +65,7 @@
   background-color: #212529;
 
   &:before {
-    @apply block w-full h-full bg-repeat-space;
+    @apply transition-transform duration-500 block w-full h-full bg-repeat-space;
     content: "";
     background-image: url("/product-pattern-bg.svg")
 
