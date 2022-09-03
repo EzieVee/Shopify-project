@@ -3,6 +3,9 @@
 display: flex;
 flex-direction: row;
 height: 1500px;
+/* justify-content: center; */
+/* align-items: center; */
+justify-content: center;
 }
 
 .child {
@@ -10,8 +13,6 @@ height: 1500px;
   height: 200px;
   background-color: red;
   margin: 1px;
-  /* display: inline-block; */
-  
   /*  flex-grow | flex-strink ?? flex-basis */
   /* flex 1 makes is so 1 1 0 with the 3 parameters */
   /* flex: 1 */
@@ -19,6 +20,4 @@ height: 1500px;
   flex-shrink: 1; */
 }
 
-.child:first-child { 
-flex-basis: 200px;
-}
+
